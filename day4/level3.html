@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantity days in a month</title>
+</head>
+
+<body>
+  <script>
+    let yourMonth = prompt('Enter a month:').toLowerCase();
+    let month = yourMonth[0].toUpperCase() + yourMonth.slice(1);
+    console.log(month);
+
+    if (month === 'January' || month === 'March' || month === 'May' || month === 'July' || month === 'August' || month === 'October' || month === 'December') {
+      alert(`${month} has 31 day.`);
+    } else if (month === 'February') {
+      alert(`${month} has 28 days.`);
+    } else if (month === 'April' || month === 'June' || month === 'September' || month === 'November') {
+      alert(`${month} has 30 days.`);
+    } else {
+      alert(`${month} is not a month.`);
+    }
+  </script>
+</body>
+
+</html>

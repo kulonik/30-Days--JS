@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seasons</title>
+</head>
+
+<body>
+  <script>
+    let yourMonth = prompt('Enter a month:')
+    let month = yourMonth.toLowerCase();
+    switch (true) {
+      case month === 'september' || month === 'october' || month === 'november':
+        alert('The season is Autumn.');
+        break;
+      case month === 'december' || month === 'january' || month === 'february':
+        alert('The season is Winter.');
+        break;
+      case month === 'march' || month === 'april' || month === 'may':
+        alert('The season is Spring.');
+        break;
+      case month === 'june' || month === 'july' || month === 'august':
+        alert('The season is Summer.');
+        break;
+      default:
+        alert('This is not a season.');
+        break;
+    }
+  </script>
+</body>
+
+</html>

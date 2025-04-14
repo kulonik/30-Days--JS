@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Companies</title>
+</head>
+
+<body>
+  <script>
+    const itCompanies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon'];
+    let companyName = prompt('Enter the name of the IT company:').toLowerCase();
+    const changedName = companyName[0].toUpperCase() + companyName.slice(1);
+    itCompanies.includes(changedName) ? alert(changedName) : alert('Not found');
+  </script>
+</body>
+
+</html>

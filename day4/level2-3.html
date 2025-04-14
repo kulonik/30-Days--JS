@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Day Of the Week</title>
+</head>
+
+<body>
+  <script>
+    let inputDay = prompt('What is the day today?').toLowerCase();
+    console.log(inputDay);
+    let today = inputDay[0].toUpperCase() + inputDay.slice(1);
+    console.log(today);
+
+    switch (true) {
+      case today === 'Saturday' || today === 'Sunday':
+        alert(`${today} is a weekend.`);
+        break;
+      case today === 'Monday' || today === 'Tuesday' || today === 'Wednesday' || today === 'Thursday' || today === 'Friday':
+        alert(`${today} is a working day.`);
+        break;
+      default:
+        alert(`${today} is not a day of the week.`);
+        break;
+    }
+  </script>
+</body>
+
+</html>

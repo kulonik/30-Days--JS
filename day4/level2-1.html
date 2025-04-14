@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students' Grades</title>
+</head>
+
+<body>
+  <script>
+    let score = prompt('Enter your scores between 0 - 100:');
+    switch (true) {
+      case score >= 80 && score <= 100:
+        alert('Excellent! Your grade is A.');
+        break;
+      case score >= 70 && score < 80:
+        alert('Very good job! Your grade is B.');
+        break;
+      case score >= 60 && score < 70:
+        alert('Not bad. Your grade is C.');
+        break;
+      case score >= 50 && score < 60:
+        alert('You can better. Your grade is D.');
+        break;
+      case score >= 0 && score < 50:
+        alert('Learn hard. Your grade is F.');
+        break;
+      default:
+        alert('You entered invalid score.');
+        break;
+    };
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colors Generator</title>
+</head>
+
+<body>
+  <script>
+    const hexa = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, "a", "b", "c", "d", "e", "f"];
+    // 2.Generate rgb colors.
+    function rgbColorGenerator() {
+      let arr = [];
+      for (let i = 0; i < 3; i++) {
+        arr.push(Math.round(Math.random() * 255));
+      }
+      return `rgb(${arr.join(', ')})`;
+    }
+
+    // 4. return any number of RGB coilors in an array.
+    function arrayOfRgbColors(n, rgbColor) {
+      let array = [];
+      for (let i = 0; i < n; i++) {
+        array.push(rgbColor);
+      }
+      return array.join(',\n');
+    }
+    let numOfRgbColors = prompt('Enter the number of RGB colors:');
+    alert(arrayOfRgbColors(numOfRgbColors, rgbColorGenerator()));
+
+    // 3. return any number of hexadecimal colors in an array.
+    function arrayOfHexaColors(n) {
+      let arrayOfColors = [];
+      for (let i = 0; i < n; i++) {
+        let color = '#';
+        for (let j = 0; j < 6; j++) {
+          color += hexa[Math.floor(Math.random() * hexa.length)];
+        }
+        arrayOfColors.push(color);
+      }
+      return arrayOfColors.join(',\n')
+    }
+    let numsOfColors = prompt('Enter the number of colors:')
+    alert(arrayOfHexaColors(numsOfColors));
+
+    // 5. convert hexa color to rgb and return rgb color.
+    function convertHexaToRgb(n) {
+
+    }
+  </script>
+</body>
+
+</html>
