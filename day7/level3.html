@@ -90,6 +90,20 @@
       return array.join('\n');
     }
     alert(userIdGeneratorByUser(idLength, idNumbers));
+
+    function rgbColorGenerator() {
+      let colorArr = [];
+
+      for (let i = 0; i < 3; i++) {
+        let colorStr = '';
+        colorStr += Math.floor(Math.random() * 255);
+        console.log(colorStr);
+        colorArr.push(Number(colorStr));
+      }
+      console.log(colorArr);
+      return `rgb(${colorArr})`;
+    }
+    console.log(rgbColorGenerator());;
   </script>
 </body>
 
