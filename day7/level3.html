@@ -74,6 +74,7 @@
       "Z",
     ];
 
+    const hexa = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
 
     let idLength = prompt('Enter the number of characters:');
     let idNumbers = prompt('Enter the number of ids:');
@@ -91,6 +92,7 @@
     }
     alert(userIdGeneratorByUser(idLength, idNumbers));
 
+    // task 2
     function rgbColorGenerator() {
       let colorArr = [];
 
@@ -103,7 +105,22 @@
       console.log(colorArr);
       return `rgb(${colorArr})`;
     }
-    console.log(rgbColorGenerator());;
+    console.log(rgbColorGenerator());
+
+    // task 3
+    let numOfColors = prompt('Enter the number of hexadecimal colors');
+    function arrayOfHexaColors(nums) {
+      let hexaColorsArr = [];
+      for (let i = 0; i < nums; i++) {
+        let hexaColor = '#';
+        for (let j = 0; j < 6; j++) {
+          hexaColor += hexa[Math.floor(Math.random() * hexa.length)];
+        }
+        hexaColorsArr.push(hexaColor);
+      }
+      return hexaColorsArr;
+    }
+    console.log(arrayOfHexaColors(numOfColors));
   </script>
 </body>
 
