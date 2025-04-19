@@ -107,6 +107,16 @@
     }
     console.log(rgbColorGenerator());
 
+    // task 4
+    let numOfRgb = prompt('Enter the number of rgb colors');
+    function arrayOfRgbColors(num, rgbColor) {
+      let arr = [];
+      for (let i = 0; i < num; i++) {
+        arr.push(rgbColor);
+      }
+      return arr;
+    }
+    console.log(arrayOfRgbColors(numOfRgb, rgbColorGenerator()));
     // task 3
     let numOfColors = prompt('Enter the number of hexadecimal colors');
     function arrayOfHexaColors(nums) {
