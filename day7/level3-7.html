@@ -9,19 +9,32 @@
 
 <body>
   <script>
+    const hexa = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'a', 'b', 'c', 'd', 'e', 'f'];
+
     let color = prompt('Hexa color or rgb color?');
     let number = prompt('Enter the number of colors');
 
-    function generateColors(col) {
-      if (col == 'hexa') {
-        return arrayOfHexaColors(num);
+    function generateColors(color) {
+      if (color == 'hexa') {
+        return arrayOfHexaColors(number);
       }
-      if (col == 'rgb') {
-        return arrayOfRgbColors();
+      if (color == 'rgb') {
+        return arrayOfRgbColors(number, rgbColorGenerator());
       }
     }
     console.log(generateColors(color, number));
 
+    function arrayOfHexaColors(nums) {
+      let hexaColorsArr = [];
+      for (let i = 0; i < nums; i++) {
+        let hexaColor = '#';
+        for (let j = 0; j < 6; j++) {
+          hexaColor += hexa[Math.floor(Math.random() * hexa.length)];
+        }
+        hexaColorsArr.push(hexaColor);
+      }
+      return hexaColorsArr;
+    }
 
     function rgbColorGenerator() {
       let colorArr = [];
@@ -41,7 +54,6 @@
       }
       return arr;
     }
-    // console.log(arrayOfRgbColors(numOfRgb, rgbColorGenerator()));
 
   </script>
 </body>
