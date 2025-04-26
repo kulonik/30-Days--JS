@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Function ShuffleArray</title>
+</head>
+
+<body>
+  <script>
+    function shuffleArray(array) {
+      let newArr = [];
+      for (let i = array.length - 1; i >= 0; i--) {
+        if (i = Math.floor(Math.random() * array.length)) {
+          newArr.push(array[i]);
+        }
+      }
+      return newArr;
+    }
+    let arr = [1, 5, 9, 'ace', true, 20];
+    console.log(shuffleArray(arr));
+  </script>
+</body>
+
+</html>
