@@ -9,17 +9,16 @@
 
 <body>
   <script>
+    const arr = [1, 5, 9, 'ace', true, 20, 'king'];
     function shuffleArray(array) {
-      let newArr = [];
-      for (let i = array.length - 1; i >= 0; i--) {
-        if (i = Math.floor(Math.random() * array.length)) {
-          newArr.push(array[i]);
-        }
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
       }
-      return newArr;
+      return array;
     }
-    let arr = [1, 5, 9, 'ace', true, 20];
     console.log(shuffleArray(arr));
+
   </script>
 </body>
 
