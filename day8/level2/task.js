@@ -140,3 +140,11 @@ console.log(keys);
 // Task 4. Get all the values of users object
 const values = Object.values(copyUsers);
 console.log(values);
+
+// Task 5. Use the countries object to print a country name, capital, populations and languages.
+const countries = {};
+countries.name = "England";
+countries.capital = "London";
+countries.population = "57 mln";
+countries.language = "English";
+console.log(countries);
