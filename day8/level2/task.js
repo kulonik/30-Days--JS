@@ -136,3 +136,7 @@ console.log(copyUsers);
 // Task 3. Get all keys of users object
 const keys = Object.keys(copyUsers);
 console.log(keys);
+
+// Task 4. Get all the values of users object
+const values = Object.values(copyUsers);
+console.log(values);
