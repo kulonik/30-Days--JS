@@ -94,3 +94,17 @@ function countLoggedInUsers(array) {
   return `There are ${n} logged in users.`;
 }
 console.log(countLoggedInUsers(entries));
+
+// 2b. Count users having greater than equal to 50 points
+function countUsersWith50Points(array) {
+  let num = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i][1]["points"] > 49) {
+      num += 1;
+      console.log(`${array[i][0]} has ${array[i][1]["points"]} points.`);
+    }
+    // return num;
+  }
+  return `There are ${num} users having greater than equal to 50 points.`;
+}
+console.log(countUsersWith50Points(entries));
