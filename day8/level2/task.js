@@ -127,3 +127,10 @@ function findMERNdeveloper(array) {
   return `There are ${user} MERN stack developers.`;
 }
 console.log(findMERNdeveloper(entries));
+
+// Task 2. Set your name in the users object without modifying the original users object
+// entries.push("Anna");
+// console.log(entries);
+console.log(copyUsers);
+copyUsers.Anna = {};
+console.log(copyUsers);
