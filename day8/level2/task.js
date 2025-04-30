@@ -69,17 +69,16 @@ const users = {
 
 // 1.
 const copyUsers = Object.assign({}, users);
-console.log(copyUsers);
 const entries = Object.entries(copyUsers);
-console.log(entries);
 function getUsersInfo(array) {
   let n = 0;
+  let user;
   for (let i = 0; i < array.length; i++) {
     if (array[i][1]["skills"].length > n) {
       n = array[i][1]["skills"].length;
+      user = `${array[i][0]} has ${n} skills.`;
     }
   }
-  return n;
+  return user;
 }
 console.log(getUsersInfo(entries));
-console.log(entries[0][1]["skills"].length);
