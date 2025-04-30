@@ -146,5 +146,5 @@ const countries = {};
 countries.name = "England";
 countries.capital = "London";
 countries.population = "57 mln";
-countries.language = "English";
+countries.language = ["English", "Irish", "Scottish"];
 console.log(countries);
