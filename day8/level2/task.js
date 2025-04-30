@@ -108,3 +108,22 @@ function countUsersWith50Points(array) {
   return `There are ${num} users having greater than equal to 50 points.`;
 }
 console.log(countUsersWith50Points(entries));
+
+// 1. Find people who are MERN stack developer
+function findMERNdeveloper(array) {
+  let user = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (
+      (array[i][1]["skills"].includes("Node") ||
+        array[i][1]["skills"].includes("Node.js")) &&
+      array[i][1]["skills"].includes("MongoDB") &&
+      array[i][1]["skills"].includes("Express") &&
+      array[i][1]["skills"].includes("React")
+    ) {
+      user += 1;
+      console.log(`${array[i][0]} is a MERN stack developer.`);
+    }
+  }
+  return `There are ${user} MERN stack developers.`;
+}
+console.log(findMERNdeveloper(entries));
