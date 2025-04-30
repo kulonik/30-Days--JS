@@ -129,8 +129,10 @@ function findMERNdeveloper(array) {
 console.log(findMERNdeveloper(entries));
 
 // Task 2. Set your name in the users object without modifying the original users object
-// entries.push("Anna");
-// console.log(entries);
 console.log(copyUsers);
 copyUsers.Anna = {};
 console.log(copyUsers);
+
+// Task 3. Get all keys of users object
+const keys = Object.keys(copyUsers);
+console.log(keys);
