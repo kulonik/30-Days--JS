@@ -67,7 +67,7 @@ const users = {
   },
 };
 
-// 1.
+// 1. Find the person who has many skills
 const copyUsers = Object.assign({}, users);
 const entries = Object.entries(copyUsers);
 function getUsersInfo(array) {
@@ -82,3 +82,15 @@ function getUsersInfo(array) {
   return user;
 }
 console.log(getUsersInfo(entries));
+
+// 2a. Count logged in users.
+function countLoggedInUsers(array) {
+  let n = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i][1]["isLoggedIn"]) {
+      n++;
+    }
+  }
+  return `There are ${n} logged in users.`;
+}
+console.log(countLoggedInUsers(entries));
