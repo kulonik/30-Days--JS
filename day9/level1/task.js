@@ -84,3 +84,9 @@ console.log(countries.find((country) => country.length === 6));
 
 // task 24
 console.log(countries.findIndex((country) => country.length === 6));
+
+// task 25
+console.log(countries.findIndex((country) => country === "Norway"));
+
+// task 26
+console.log(countries.findIndex((country) => country === "Russia"));
