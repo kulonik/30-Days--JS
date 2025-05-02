@@ -63,3 +63,12 @@ function getStringLists(array) {
 
 const myList = ["shopping", "knitting", 23, true, null, "cooking"];
 console.log(getStringLists(myList));
+
+// task 17
+console.log(numbers.reduce((acc, cur) => acc + cur, 0));
+
+// task 18
+const sent = countries.reduce(function (acc, cur) {
+  return `${acc}, ${cur}`;
+});
+console.log(`${sent} are north European countries`);
