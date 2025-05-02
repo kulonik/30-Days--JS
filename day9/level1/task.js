@@ -72,3 +72,15 @@ const sent = countries.reduce(function (acc, cur) {
   return `${acc}, ${cur}`;
 });
 console.log(`${sent} are north European countries`);
+
+// task 20
+console.log(names.some((name) => name.length > 7));
+
+// task 21
+console.log(countriesToLowCase.every((item) => item.includes("land")));
+
+// task 23
+console.log(countries.find((country) => country.length === 6));
+
+// task 24
+console.log(countries.findIndex((country) => country.length === 6));
