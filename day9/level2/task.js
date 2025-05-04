@@ -11,7 +11,7 @@ const products = [
   { product: "tea", price: "" },
 ];
 
-const alphebet = [
+const alphabet = [
   "A",
   "B",
   "C",
@@ -65,7 +65,7 @@ function getNumOfLetters(array1, array2) {
   }
   return arrayOfObjects;
 }
-console.log(getNumOfLetters(countries, alphebet));
+console.log(getNumOfLetters(countries, alphabet));
 
 // task 5
 function getFirstTenCountries(array) {
@@ -78,3 +78,15 @@ function getLastTenCountries(array) {
   return array.slice(-10);
 }
 console.log(getLastTenCountries(countries));
+
+// task 7
+function getLetterWithManyCountries(array) {
+  array.sort((a, b) => {
+    if (a.number > b.number) return -1;
+    if (a.number < b.number) return 1;
+    return 0;
+  });
+  return array.slice(0, 1);
+}
+let arrayWithCountries = getNumOfLetters(countries, alphabet);
+console.log(getLetterWithManyCountries(arrayWithCountries));
