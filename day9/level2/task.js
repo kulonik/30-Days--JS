@@ -66,3 +66,15 @@ function getNumOfLetters(array1, array2) {
   return arrayOfObjects;
 }
 console.log(getNumOfLetters(countries, alphebet));
+
+// task 5
+function getFirstTenCountries(array) {
+  return array.slice(0, 10);
+}
+console.log(getFirstTenCountries(countries));
+
+// task 6
+function getLastTenCountries(array) {
+  return array.slice(-10);
+}
+console.log(getLastTenCountries(countries));
