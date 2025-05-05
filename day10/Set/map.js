@@ -36,3 +36,32 @@ for (const country of countriesMap) {
 for (const [country, city] of countriesMap) {
   console.log(country, city);
 }
+
+// ForEach for Map
+let recipeMap = new Map([
+  ["cucumber", 500],
+  ["tomato", 350],
+  ["onion", 50],
+]);
+
+recipeMap.forEach((value, key, map) => {
+  console.log(`${key}: ${value}`);
+});
+
+// Object.entries: map from object
+let obj = {
+  name: "John",
+  age: 30,
+};
+
+let personMap = new Map(Object.entries(obj));
+console.log(personMap);
+
+// Object.fromEntries: Object from Map
+let prices = Object.fromEntries([
+  ["banana", 1],
+  ["orange", 2],
+  ["meat", 4],
+]);
+
+console.log(prices);

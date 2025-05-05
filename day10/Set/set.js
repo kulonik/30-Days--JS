@@ -80,3 +80,10 @@ console.log(C);
 let d = a.filter((num) => !B.has(num));
 let D = new Set(d);
 console.log(D);
+
+// forEach for Set
+let fruits = new Set(["orange", "apple", "banana"]);
+
+fruits.forEach((fruit, fruitAgain, fruits) => {
+  console.log(fruit);
+});
