@@ -30,3 +30,16 @@ function getSumOfArrays(a, b) {
   return Number(a) - Number(b);
 }
 console.log(getSumOfArrays(match1, match2));
+
+// task 3
+let variable = "firstname";
+function checkVariable(str) {
+  const pattern = /if|else|switch|function|let|const|var|[' '\!@#%&*()+-=]/g;
+  const match = pattern.test(str);
+  if (match) {
+    return false;
+  } else {
+    return true;
+  }
+}
+console.log(checkVariable(variable));
