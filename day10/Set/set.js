@@ -1,6 +1,6 @@
 // Creating an empty set
 const companies = new Set();
-console.log(companies);
+console.log(companies); // {}
 
 // Creating set from array
 const languages = [
@@ -14,41 +14,41 @@ const languages = [
 ];
 
 const setOfLanguages = new Set(languages);
-console.log(setOfLanguages);
+console.log(setOfLanguages); // {'English', 'Finnish', 'french', 'Spanish'}
 
 for (const language of languages) {
-  console.log(language);
+  console.log(language); // English Finnish English French Spanish English French
 }
 
 // Adding an element to a set
-console.log(companies.size);
+console.log(companies.size); // 0
 companies.add("Google");
 companies.add("Facebook");
 companies.add("Amazon");
-console.log(companies);
+console.log(companies); // {'Google', 'Facebook', 'Amazon'}
 
 setOfCompanies = new Set();
 for (const company of companies) {
   setOfCompanies.add(company);
 }
-console.log(setOfCompanies);
+console.log(setOfCompanies); // {'Google', 'Facebook', 'Amazon'}
 
 // Deleting an element a set
-console.log(companies.delete("Google"));
-console.log(companies);
+console.log(companies.delete("Google")); // true
+console.log(companies); // {'Facebook', 'Amazon'}
 
 // Checking an element in the set
-console.log(companies.has("Apple"));
-console.log(companies.has("Facebook"));
+console.log(companies.has("Apple")); // false
+console.log(companies.has("Facebook")); // true
 
 // clearing the set (remove all the elements from a set)
 companies.clear();
-console.log(companies);
-console.log(setOfCompanies);
+console.log(companies); // {}
+console.log(setOfCompanies); // {'Google', 'Facebook', 'Amazon'}
 
 // Example
 const langSet = new Set(languages);
-console.log(langSet, langSet.size);
+console.log(langSet, langSet.size); // {'English', 'Finnish', 'French', 'Spanish'} 4
 
 const counts = [];
 const count = {};

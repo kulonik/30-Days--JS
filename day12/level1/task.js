@@ -32,7 +32,7 @@ function getSumOfArrays(a, b) {
 console.log(getSumOfArrays(match1, match2));
 
 // task 3
-let variable = "firstname";
+let variable = "first_name";
 function checkVariable(str) {
   const pattern = /if|else|switch|function|let|const|var|[' '\!@#%&*()+-=]/g;
   const match = pattern.test(str);
