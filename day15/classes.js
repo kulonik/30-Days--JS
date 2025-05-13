@@ -143,3 +143,43 @@ console.log(person5.getPersonInfo());
 // Static method (example - Date.now())
 console.log(Person2.favoriteSkill());
 console.log(Person2.showDateTime());
+
+// INHERITANCE
+// class ChildClassName extends {
+//   // code goes here
+// }
+
+class Student extends Person2 {
+  constructor(firstName, lastName, age, country, city, gender) {
+    super(firstName, lastName, age, country, city);
+    this.gender = gender;
+  }
+  saySomething() {
+    console.log("I am a child of the person class");
+  }
+  getPersonInfo() {
+    let fullName = this.getFullName();
+    let skills =
+      this.skills.length > 0 &&
+      this.skills.slice(0, this.skills.length - 1).join(", ") +
+        ` and ${this.skills[this.skills.length - 1]}`;
+
+    let formattedSkills = skills ? `He knows ${skills}` : "";
+    let pronoun = this.gender == "Male" ? "He" : "She";
+
+    let info = `${fullName} is ${this.age}. ${pronoun} lives in ${this.city}, ${this.country}.`;
+    return info;
+  }
+}
+const s1 = new Student(
+  "Asabeneh",
+  "Yetayeh",
+  "Finland",
+  250,
+  "Helsinki",
+  "Male"
+);
+console.log(s1);
+console.log(s1.saySomething());
+console.log(s1.getFullName());
+console.log(s1.getPersonInfo());
