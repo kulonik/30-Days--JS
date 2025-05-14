@@ -33,21 +33,27 @@ class Dog extends Animal {
     super(name, age, color, legs, sound);
     this.breed = breed;
   }
-  saySomething() {
-    console.log("I am a child of Animal");
+  getInfo() {
+    let info = `The ${this.color} ${this.breed}'s name is ${this.name}. It's ${this.age} y.o. and it has ${this.legs} legs. It says "${this.sound}"`;
+    return info;
   }
 }
 const terrier = new Dog("Jack", 7, "brown", 4, "woof", "terrier");
 terrier.setSound = "woof";
 console.log(terrier);
-console.log(terrier.saySomething());
+console.log(terrier.getInfo());
 
 class Cat extends Animal {
   constructor(name, age, color, legs, hobby) {
     super(name, age, color, legs);
     this.hobby = hobby;
   }
+  getInfo() {
+    let info = this.getAnimalInfo() + " " + `${this.name} likes ${this.hobby}.`;
+    return info;
+  }
 }
 const kitten = new Cat("Puffy", 0.5, "white", 4, "knitting");
 kitten.setSound = "murr";
 console.log(kitten);
+console.log(kitten.getInfo());
