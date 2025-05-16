@@ -39,9 +39,20 @@ class Statistics {
       return (lowMedian + highMedian) / 2;
     }
   }
+  mode(index) {
+    let array = [];
+    for (const item of this.age) {
+      if (item === index) {
+        array.push(item);
+      }
+    }
+    return array.length;
+  }
 }
 
 const numbers = new Statistics(ages);
+
+console.log(numbers);
 console.log("Count:", numbers.count());
 console.log("Sum:", numbers.sum());
 console.log("Min:", numbers.minNum());
@@ -49,3 +60,4 @@ console.log("Max:", numbers.maxNum());
 console.log("Range:", numbers.range());
 console.log("Mean:", numbers.mean());
 console.log("Median:", numbers.median());
+console.log("Mode:", 26, ", count:", numbers.mode(26));
