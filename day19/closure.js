@@ -33,3 +33,16 @@ const anotherInnerFunc = anotherOuterFunction();
 
 console.log(anotherInnerFunc.plusOne);
 console.log(anotherInnerFunc.minusOne);
+console.log("This is another outer function:", anotherInnerFunc);
+
+let a = "static";
+function f1() {
+  console.log(a);
+}
+
+function f2() {
+  let a = "dynamic";
+  f1();
+}
+
+f2();
