@@ -6,3 +6,12 @@ paras[1].style.background = "yellow";
 paras[2].style.border = "2px solid blue";
 paras[3].style.fontSize = "24px";
 paras.forEach((para) => (para.style.fontFamily = "Courier"));
+
+// task 2
+for (let i = 0; i < paras.length; i++) {
+  if (i % 2 === 0) {
+    paras[i].style.color = "green";
+  } else {
+    paras[i].style.color = "red";
+  }
+}
