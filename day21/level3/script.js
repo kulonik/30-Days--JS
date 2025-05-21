@@ -11,6 +11,7 @@ wrapper.style.fontFamily = "Courier";
 h1.innerHTML = "Asabeneh Yetayeh challenges in <span>2020</span>";
 
 h1.style.fontSize = "24px";
+h1.style.alignSelf = "center";
 const span = document.querySelector("span");
 
 span.style.fontSize = "40px";
@@ -28,3 +29,9 @@ function setColor() {
   span.style.color = getColor();
 }
 setInterval(setColor, 1000);
+
+h2.style.fontSize = "18px";
+h2.style.width = "350px";
+h2.style.margin = "auto";
+h2.style.color = "grey";
+h2.style.textDecoration = "underline";
