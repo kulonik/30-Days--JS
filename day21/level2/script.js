@@ -15,3 +15,8 @@ for (let i = 0; i < paras.length; i++) {
     paras[i].style.color = "red";
   }
 }
+
+// task 3
+paras.forEach((para) => (para.className = "para"));
+paras.forEach((para) => (para.textContent = "I love programming."));
+paras[0].id = "first-para";
