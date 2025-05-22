@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Model: 30 Days of JavaScript</title>
+</head>
+
+<body>
+  <script>
+    // Creating an element
+    let title = document.createElement('h1');
+    title.className = 'title';
+    title.style.fontSize = '24px';
+    title.textContent = 'Creating HTML element DOM Day 2';
+    document.body.appendChild(title);
+
+    console.log(title);
+
+    // Creating elements
+    let subtitle;
+    for (let i = 0; i < 3; i++) {
+      subtitle = document.createElement('h2');
+      title.className = 'subtitle';
+      subtitle.style.fontSize = '20px';
+      subtitle.textContent = i;
+      document.body.appendChild(subtitle)
+      console.log(subtitle);
+    }
+
+    // Appending child to a parent element: document.[parent].appendChild()
+  </script>
+</body>
+
+</html>
