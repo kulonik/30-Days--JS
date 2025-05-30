@@ -7,14 +7,15 @@ const input = document.querySelector("input");
 const button = document.querySelector("button");
 const ul = document.querySelector("ul");
 
-header.style.cssText = "height: 100px; width: 70%; margin: 0px auto";
+header.style.cssText = "width: 70%; margin: 50px auto";
 
 h1.style.cssText =
   "font-family: courier; color:#24a724; text-align: center; margin-top: 30px";
 
 div.style.cssText = "width: 50%; margin: 0px auto";
 
-p.style.cssText = "text-align: left; color: red";
+p.style.cssText =
+  "text-align: left; color: red; font-size: 14px; font-style: italic; font-family: Courier; height: 28px; margin-bottom: 5px";
 
 wrapper.style.cssText =
   "width: 100%; display: flex; justify-content: space-between";
@@ -30,6 +31,7 @@ button.addEventListener("click", getNum);
 function getNum() {
   let digitRegExp = /^\d+$/;
   if (digitRegExp.test(input.value)) {
+    ul.innerHTML = "";
     getNums(input.value);
     p.textContent = "";
   } else {
@@ -45,5 +47,7 @@ function getNum() {
 }
 
 function getNums(num) {
-  for (let i = 0; i <= num; i++) ul.innerHTML += `<li>${i}</li>`;
+  for (let i = 0; i < num; i++) {
+    ul.innerHTML += `<li>${i}</li>`;
+  }
 }
