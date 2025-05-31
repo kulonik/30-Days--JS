@@ -31,7 +31,6 @@ button.addEventListener("click", getNum);
 function getNum() {
   let digitRegExp = /^\d+$/;
   if (digitRegExp.test(input.value)) {
-    ul.innerHTML = "";
     getNums(input.value);
     p.textContent = "";
   } else {
@@ -47,7 +46,12 @@ function getNum() {
 }
 
 function getNums(num) {
+  let li;
   for (let i = 0; i < num; i++) {
-    ul.innerHTML += `<li>${i}</li>`;
+    li = document.createElement("li");
+    li.style.cssText =
+      "width: 60px; height: 30px; background: grey; color: white; text-align: center; padding-top: 5px; font-size: 20px";
+    li.textContent = i;
+    ul.appendChild(li);
   }
 }
