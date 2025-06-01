@@ -25,12 +25,13 @@ button.style.cssText =
   "border: solid 1px #24a724; background: #24a724; color: #fff; font-family: courier; font-size: 12px;height: 44px; width: 35%";
 
 ul.style.cssText =
-  "display: flex; flex-wrap: wrap; gap: 2px; list-style-type: none";
+  "width: 100%; margin: 50px auto; display: flex; flex-wrap: wrap; gap: 2px; list-style-type: none; padding: 0px";
 
 button.addEventListener("click", getNum);
 function getNum() {
   let digitRegExp = /^\d+$/;
   if (digitRegExp.test(input.value)) {
+    ul.textContent = "";
     getNums(input.value);
     p.textContent = "";
   } else {
@@ -50,8 +51,33 @@ function getNums(num) {
   for (let i = 0; i < num; i++) {
     li = document.createElement("li");
     li.style.cssText =
-      "width: 60px; height: 30px; background: grey; color: white; text-align: center; padding-top: 5px; font-size: 20px";
+      "width: 100px; height: 31px; color: white; text-align: center; padding-top: 1px; font-size: 28px; font-weight: bold; background: yellow";
     li.textContent = i;
     ul.appendChild(li);
+    if (isPrime(i)) {
+      li.style.background = "red";
+    }
+    if (i % 2 === 0 && i !== 2) {
+      li.style.background = "#24a724";
+    }
   }
 }
+
+function isPrime(n) {
+  if (n <= 1) {
+    return false;
+  }
+  if (n === 2 || n === 3) {
+    return true;
+  }
+  if (n % 2 === 0 || n % 3 === 0) {
+    return false;
+  }
+  for (let i = 5; i <= Math.sqrt(n); i = i + 6) {
+    if (n % i === 0 || n % (i + 2) === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(isPrime(10));
