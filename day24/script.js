@@ -15,7 +15,7 @@ form.style.cssText = "margin: 80px auto; width: 450px";
 
 mass.style.cssText = "width: 150px; height: 25px; font-size: 16px";
 
-planet.style.cssText = "width: 120px; height: 25px; font-size: 16px";
+planet.style.cssText = "width: 120px; height: 30px; font-size: 16px";
 
 button.style.cssText =
   "width: 150px; height: 30px; font-size: 16px; background:rgba(157, 161, 161, 0.7); color: #ffffff";
