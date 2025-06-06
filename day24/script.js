@@ -27,3 +27,21 @@ content.style.cssText =
 
 contentDesc.style.cssText =
   "margin: 15px auto; width: 30%; padding: 20px; background: rgba(54, 56, 56, 0.4); text-align: center; color: #ffffff; font-family: Arial; font-size: 20px";
+
+const freeFallAcceleration = {
+  mercury: 3.7,
+  venus: 8.9,
+  earth: 9.8,
+  mars: 3.7,
+  jupiter: 25,
+  saturn: 10.4,
+  uranus: 8.9,
+  neptune: 11,
+  pluto: 0.7,
+};
+
+function getWeight(m, g) {
+  return (m / 9.8) * g;
+}
+
+console.log(getWeight(73, freeFallAcceleration.jupiter));
