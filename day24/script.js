@@ -1,6 +1,6 @@
 const h1 = document.querySelector("h1");
 const wrapper = document.querySelector(".wrapper");
-const form = document.querySelector("form");
+const form = document.querySelector("#form");
 const mass = document.querySelector("#mass");
 const planet = document.querySelector("#planet");
 const button = document.querySelector("button");
@@ -26,7 +26,7 @@ content.style.cssText =
   "width: 80%; height: auto; padding: 50px; background: rgba(54, 56, 56, 0.4); margin: 0 auto";
 
 contentDesc.style.cssText =
-  "margin: 15px auto; width: 30%; padding: 20px; background: rgba(54, 56, 56, 0.4); text-align: center; color: #ffffff; font-family: Arial; font-size: 20px";
+  "margin: 15px auto; padding: 20px; background: rgba(54, 56, 56, 0.4); text-align: center; color: #ffffff; font-family: Arial; font-size: 20px";
 
 const freeFallAcceleration = {
   mercury: 3.7,
@@ -41,7 +41,40 @@ const freeFallAcceleration = {
 };
 
 function getWeight(m, g) {
-  return (m / 9.8) * g;
+  return Math.round(m * g);
 }
 
-console.log(getWeight(73, freeFallAcceleration.jupiter));
+button.addEventListener("click", () => {
+  let massOfObject = Number(mass.value);
+  let objectWeight;
+  if (planet.value === "mercury") {
+    objectWeight = getWeight(massOfObject, freeFallAcceleration.mercury);
+  }
+  if (planet.value === "venus") {
+    objectWeight = getWeight(massOfObject, freeFallAcceleration.venus);
+  }
+  if (planet.value === "earth") {
+    objectWeight = getWeight(massOfObject, freeFallAcceleration.earth);
+  }
+  if (planet.value === "mars") {
+    objectWeight = getWeight(massOfObject, freeFallAcceleration.mars);
+  }
+  if (planet.value === "jupiter") {
+    objectWeight = getWeight(massOfObject, freeFallAcceleration.jupiter);
+  }
+  if (planet.value === "saturn") {
+    objectWeight = getWeight(massOfObject, freeFallAcceleration.saturn);
+  }
+  if (planet.value === "uranus") {
+    objectWeight = getWeight(massOfObject, freeFallAcceleration.uranus);
+  }
+  if (planet.value === "neptune") {
+    objectWeight = getWeight(massOfObject, freeFallAcceleration.neptune);
+  }
+  if (planet.value === "pluto") {
+    objectWeight = getWeight(massOfObject, freeFallAcceleration.pluto);
+  }
+  contentDesc.innerHTML = `<p>The weight of the object on <span class="bold">${planet.value
+    .slice(0, 1)
+    .toUpperCase()}${planet.value.slice(1)}</span> ${objectWeight}.00 N</p>`;
+});
