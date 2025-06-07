@@ -25,3 +25,25 @@ console.log(ageRange);
 
 console.log(Math.abs(minAge - averageAge));
 console.log(Math.abs(maxAge - averageAge));
+
+// Task 2
+// Slice the first ten countries from the countries array
+
+const countries = require("../arrays/countries");
+
+let firstTenCountries = countries.slice(0, 10);
+console.log(firstTenCountries);
+
+// find the middle country in the array
+let middleCountry = countries.slice(
+  countries.length / 2,
+  countries.length / 2 + 1
+);
+console.log(middleCountry);
+
+// divide the countries into two equal arrays
+let firstArray = countries.slice(0, countries.length / 2 + 1);
+let secondArray = countries.slice(countries.length / 2 + 1, countries.length);
+console.log(firstArray, secondArray);
+
+console.log(firstArray.length, secondArray.length);
