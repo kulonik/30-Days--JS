@@ -8,9 +8,34 @@ function solveLinEquation(a, b, c, y) {
 console.log(solveLinEquation(2, 1, 0, 3));
 
 // 2. write a function which calculates value or values of a quadratic equation.
-// function solveQuadEquation(a, b, c) {
-// }
-// console.log(solveQuadEquation(0, 3, 2));
+function solveQuadEquation(a, b, c) {
+  if (a === 0) {
+    console.log("Invalid");
+    return;
+  }
+  let d = b * b - 4 * a * c;
+  let sqrt_val = Math.sqrt(Math.abs(d));
+
+  if (d > 0) {
+    console.log(
+      (-b + sqrt_val) / (2 * a) + " and " + (-b - sqrt_val) / (2 * a)
+    );
+  } else if (d == 0) {
+    console.log(-b / (2 * a) + " and " + -b / (2 * a));
+  } else {
+    console.log(
+      -b / (2 * a) +
+        " + i" +
+        sqrt_val / (2 * a) +
+        " and " +
+        -b / (2 * a) +
+        " - i" +
+        sqrt_val
+    ) /
+      (2 * a);
+  }
+}
+console.log(solveQuadEquation(1, 7, 12));
 
 // 3. Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
 function printArray(arr) {
@@ -73,8 +98,8 @@ const reverseArray = (...args) => {
   }
   return reversed;
 };
-console.log(reverseArray(1, 2, 3, 4, 5));
-console.log(reverseArray("A", "B", "C", "D"));
+// console.log(reverseArray(1, 2, 3, 4, 5));
+// console.log(reverseArray("A", "B", "C", "D"));
 
 // 7. Function takes array as a parameter and returns the capitalized array.
 const capitalizeArray = (...args) => {
@@ -84,7 +109,7 @@ const capitalizeArray = (...args) => {
   }
   return array;
 };
-console.log(capitalizeArray("fruits", "vegetables", "food"));
+// console.log(capitalizeArray("fruits", "vegetables", "food"));
 
 // 8. Function takes an item parameter and returns an array after adding the item.
 function addItem(item) {
@@ -126,7 +151,7 @@ function sumOfOdds(n) {
   }
   return sum;
 }
-console.log(sumOfOdds(7));
+// console.log(sumOfOdds(7));
 
 // 12. Function takes a number parameter and adds all the even numbers in that range.
 function sumOfEven(n) {
@@ -138,7 +163,7 @@ function sumOfEven(n) {
   }
   return sum;
 }
-console.log(sumOfEven(4));
+// console.log(sumOfEven(4));
 
 // 13. Function takes a positive integer as parameter and counts number of evens and odds in the number.
 function evensAndOdds(n) {
@@ -155,7 +180,7 @@ function evensAndOdds(n) {
     `The number of odds is ${oddArray.length}.\nThe number of evens is ${evenArray.length}.`
   );
 }
-evensAndOdds(100);
+// evensAndOdds(100);
 
 // 14. write a function which takes any number of arguments and return the sum of the arguments.
 const sum = (...args) => {
@@ -165,7 +190,7 @@ const sum = (...args) => {
   }
   return sum;
 };
-console.log(sum(13, 20, 33));
+// console.log(sum(13, 20, 33));
 
 // 15. write a function which generate a randomUserIp.
 function randomUserIp() {
@@ -176,7 +201,7 @@ function randomUserIp() {
   }
   return ipArray.join(".");
 }
-console.log(randomUserIp());
+// console.log(randomUserIp());
 
 // 16. write a function which generates a randomMacAddress
 let hyphens = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
@@ -192,7 +217,7 @@ function randomMacAddress() {
   }
   return macAddressArray.join("-");
 }
-console.log(randomMacAddress());
+// console.log(randomMacAddress());
 
 // 17. write the function which generates a random hexadecimal number.
 function randomHexaNumberGenerator() {
@@ -202,7 +227,7 @@ function randomHexaNumberGenerator() {
   }
   return color;
 }
-console.log(randomHexaNumberGenerator());
+// console.log(randomHexaNumberGenerator());
 
 // 18. write a function which generates seven character id.
 function userIdGenerator(n) {
@@ -212,4 +237,4 @@ function userIdGenerator(n) {
   }
   return string;
 }
-console.log(userIdGenerator(7));
+// console.log(userIdGenerator(7));
