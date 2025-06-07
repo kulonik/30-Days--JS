@@ -28,7 +28,7 @@ let myAge = 250;
 let yourAge = 25;
 console.log(`I am ${myAge - yourAge} years older than you.`);
 
-// Create a human readable time format using Date time object:
+// 13. Create a human readable time format using Date time object:
 let now = new Date();
 let year = now.getFullYear();
 let month = now.getMonth() + 1;
