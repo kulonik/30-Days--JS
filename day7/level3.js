@@ -28,7 +28,6 @@ console.log(sum(15, 25, 35, 50, 9, 4));
 
 function sumOfArrayItems(array) {
   let sum = 0;
-  let newArr = [];
   for (const item of array) {
     if (typeof item == "string") {
       return "Invalid";
@@ -39,3 +38,16 @@ function sumOfArrayItems(array) {
 }
 const arr = [2, 8, 9, 65, 13];
 console.log(sumOfArrayItems(arr));
+
+// 13. Write a function called average, it takes an array parameter and returns the average of the items.
+function average(array) {
+  let sum = 0;
+  for (const item of array) {
+    if (typeof item == "string") {
+      return "Invalid";
+    }
+    sum += item;
+  }
+  return sum / array.length;
+}
+console.log(average(arr));
