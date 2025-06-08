@@ -23,3 +23,19 @@ function sum(...args) {
   return sum;
 }
 console.log(sum(15, 25, 35, 50, 9, 4));
+
+// 12. Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items.
+
+function sumOfArrayItems(array) {
+  let sum = 0;
+  let newArr = [];
+  for (const item of array) {
+    if (typeof item == "string") {
+      return "Invalid";
+    }
+    sum += item;
+  }
+  return sum;
+}
+const arr = [2, 8, 9, 65, 13];
+console.log(sumOfArrayItems(arr));
