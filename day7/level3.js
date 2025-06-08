@@ -66,3 +66,14 @@ let wordsArray = ["apple", "melon", "cabbage", "cucumber", "banana", "lemon"];
 let shortArray = ["Apple", "Nokia", "LG", "Nvidia"];
 console.log(modifyArray(wordsArray));
 console.log(modifyArray(shortArray));
+
+// 15. Write a function called isPrime, which checks if a number is prime number.
+function isPrime(n) {
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+    return true;
+  }
+}
+console.log(isPrime(121));
