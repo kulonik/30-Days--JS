@@ -2,7 +2,7 @@
 function factorial(n) {
   return n != 1 ? n * factorial(n - 1) : 1;
 }
-console.log(factorial(5));
+// console.log(factorial(5));
 
 // 10. write function isEmpty
 function isEmpty(item) {
@@ -11,7 +11,7 @@ function isEmpty(item) {
   }
   return "It is not empty";
 }
-console.log(isEmpty(0));
+// console.log(isEmpty(0));
 
 // 11. call your function sum, it takes any number or arguments and it returns the sum.
 
@@ -22,7 +22,7 @@ function sum(...args) {
   }
   return sum;
 }
-console.log(sum(15, 25, 35, 50, 9, 4));
+// console.log(sum(15, 25, 35, 50, 9, 4));
 
 // 12. Write a function called sumOfArrayItems, it takes an array parameter and return the sum of all the items.
 
@@ -36,8 +36,8 @@ function sumOfArrayItems(array) {
   }
   return sum;
 }
-const arr = [2, 8, 9, 65, 13];
-console.log(sumOfArrayItems(arr));
+const arr = [2, 8, 9, 65, "hello", 13];
+// console.log(sumOfArrayItems(arr));
 
 // 13. Write a function called average, it takes an array parameter and returns the average of the items.
 function average(array) {
@@ -50,4 +50,19 @@ function average(array) {
   }
   return sum / array.length;
 }
-console.log(average(arr));
+// console.log(average(arr));
+
+// 14. Write a function called modifyArray takes array as parameter and modifies the fifth item of the array and return the array.
+
+function modifyArray(array) {
+  if (array.length < 5) {
+    return "item not found";
+  } else {
+    array[4] = array[4].toUpperCase();
+    return array;
+  }
+}
+let wordsArray = ["apple", "melon", "cabbage", "cucumber", "banana", "lemon"];
+let shortArray = ["Apple", "Nokia", "LG", "Nvidia"];
+console.log(modifyArray(wordsArray));
+console.log(modifyArray(shortArray));
