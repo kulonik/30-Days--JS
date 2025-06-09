@@ -77,3 +77,24 @@ function isPrime(n) {
   }
 }
 console.log(isPrime(121));
+
+// write a function which checks if all items are unique in the array.
+
+function checkUniqueItems(array) {
+  let dupli = [];
+  for (let i in array) {
+    for (let j in array) {
+      if (i !== j && array[i] === array[j] && !dupli.includes(array[i])) {
+        dupli.push(array[i]);
+      }
+    }
+  }
+  if (dupli.length === 0) {
+    return "All items are unique";
+  } else {
+    return "There are dupli in the array";
+  }
+}
+
+let dupliArray = [2, 4, 8, 11, 5, 6];
+console.log(checkUniqueItems(dupliArray));
