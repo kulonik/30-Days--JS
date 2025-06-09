@@ -98,3 +98,11 @@ function checkUniqueItems(array) {
 
 let dupliArray = [2, 4, 8, 11, 5, 6];
 console.log(checkUniqueItems(dupliArray));
+
+// 17. Write a function which checks if all the items of the array are the same date type
+
+function checkDataType(array) {
+  return array.every((elem) => typeof elem === typeof array[0]);
+}
+console.log(checkDataType(arr));
+console.log(checkDataType(wordsArray));
