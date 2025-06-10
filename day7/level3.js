@@ -118,3 +118,15 @@ function isValidVariable(variable) {
   }
 }
 console.log(isValidVariable(myVar));
+
+// 19. Write a function which returns array of seven random numbers in a range of 0-9.
+
+function sevenRandomNumbers() {
+  const uniqueNumbers = new Set();
+  while (uniqueNumbers.size < 7) {
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+    uniqueNumbers.add(randomNumber);
+  }
+  return Array.from(uniqueNumbers);
+}
+console.log(sevenRandomNumbers());
