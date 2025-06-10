@@ -106,3 +106,15 @@ function checkDataType(array) {
 }
 console.log(checkDataType(arr));
 console.log(checkDataType(wordsArray));
+
+// 18. Write a function isValidVariable which checks if a variable is valid or not.
+let myVar = "25foo25";
+function isValidVariable(variable) {
+  let regExp = /^([a-zA-Z_$][a-zA-Z\d_$]*)$/;
+  if (variable.match(regExp)) {
+    return "Valid";
+  } else {
+    return "Invalid";
+  }
+}
+console.log(isValidVariable(myVar));
