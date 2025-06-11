@@ -130,3 +130,11 @@ function sevenRandomNumbers() {
   return Array.from(uniqueNumbers);
 }
 console.log(sevenRandomNumbers());
+
+// 20. Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array.
+function reverseCountries(array) {
+  let newArr = new Array(array);
+  return array.reverse();
+}
+let countries = require("../arrays/countries");
+console.log(reverseCountries(countries));
