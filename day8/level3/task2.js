@@ -1,17 +1,19 @@
 const users = require("./arrays");
 const prompt = require("prompt-sync")({ sigint: true });
 
-console.log(users);
 let yourName = prompt("Enter your name");
-console.log(yourName);
 
 function signUp(array, name) {
-  for (let i = 0; i < users.length; i++) {
-    if (array[i]["username"] === name) {
-      return "You already have an account";
-    }
-    return array.push({ username: `${name}` });
+  let newArr = [];
+  for (let i = 0; i < array.length; i++) {
+    newArr.push(array[i]["username"]);
   }
+
+  if (newArr.includes(name)) {
+    return "You have already an account";
+  } else {
+    array.push({ username: name });
+  }
+  return array;
 }
 console.log(signUp(users, yourName));
-console.log(users);
