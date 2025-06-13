@@ -22,8 +22,10 @@ console.log(signUp(users, yourChangedName));
 
 // b. Create a function called signIn which allows user to sign in to the application.
 let email = prompt("Enter your email");
+let password = prompt("Enter your password");
 function signIn(array, user) {
   array[array.length - 1].email = user;
+  array[array.length - 1].password = password;
   return array;
 }
 signIn(users, email);
