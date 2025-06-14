@@ -72,4 +72,4 @@ const products = [
 ];
 
 module.exports = users;
-// module.exports = products;
+module.exports = products;
