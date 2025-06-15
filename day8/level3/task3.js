@@ -2,15 +2,20 @@
 // a. Create a function called rateProduct which rates the product.
 const products = require("./arrays");
 
-function rateProduct(array) {
+let mobile = Object.assign({}, products[0]);
+let laptop = Object.assign({}, products[1]);
+let tv = Object.assign({}, products[2]);
+
+function rateProduct(obj) {
+  let rates = obj.ratings;
   let sum = 0;
-  for (const item of array) {
-    console.log(item.ratings);
-    for (let i = 0; i < item.ratings.length; i++) {
-      sum += item.ratings[i].rate;
-    }
-    return `${item.name} has rating ${sum}.`;
+  for (let i = 0; i < rates.length; i++) {
+    sum += rates[i].rate;
   }
+  return `${obj.name} has rating ${sum}.`;
 }
-rateProduct(products);
-console.log(rateProduct(products));
+rateProduct(mobile);
+rateProduct(tv);
+console.log(rateProduct(mobile));
+console.log(rateProduct(laptop));
+console.log(rateProduct(tv));
