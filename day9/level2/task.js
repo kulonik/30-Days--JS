@@ -41,6 +41,7 @@ const alphabet = [
 ];
 
 // task 1
+console.log("task 1");
 console.log(
   products
     .map((item) => item.price)
@@ -48,13 +49,31 @@ console.log(
     .reduce((acc, cur) => acc + cur)
 );
 
+// task 2
+console.log("\ntask 2");
+function callback(products) {
+  let array = [];
+  for (const item of products) {
+    if (typeof item.price == "number") {
+      array.push(item.price);
+    }
+  }
+  return array;
+}
+console.log(callback(products));
+function getSum(arr) {
+  arr.reduce((acc, cur) => acc + cur, 0);
+}
+console.log(getSum(callback(products)));
 // task 3
+console.log("\ntask 3");
 function categorizeCountries(array) {
   return array.filter((item) => item.includes("land"));
 }
 console.log(categorizeCountries(countries));
 
 // task 4
+console.log("\ntask 4");
 function getNumOfLetters(array1, array2) {
   let arrayOfObjects = [];
   for (let i = 0; i < array2.length; i++) {
@@ -68,18 +87,21 @@ function getNumOfLetters(array1, array2) {
 console.log(getNumOfLetters(countries, alphabet));
 
 // task 5
+console.log("\ntask 5");
 function getFirstTenCountries(array) {
   return array.slice(0, 10);
 }
 console.log(getFirstTenCountries(countries));
 
 // task 6
+console.log("\ntask 6");
 function getLastTenCountries(array) {
   return array.slice(-10);
 }
 console.log(getLastTenCountries(countries));
 
 // task 7
+console.log("\ntask 7");
 function getLetterWithManyCountries(array) {
   array.sort((a, b) => {
     if (a.number > b.number) return -1;
