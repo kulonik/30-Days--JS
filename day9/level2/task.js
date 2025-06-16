@@ -60,11 +60,10 @@ function callback(products) {
   }
   return array;
 }
-console.log(callback(products));
-function getSum(arr) {
-  arr.reduce((acc, cur) => acc + cur, 0);
-}
-console.log(getSum(callback(products)));
+let arr = callback(products);
+console.log(arr);
+console.log(arr.reduce((acc, cur) => acc + cur, 0));
+
 // task 3
 console.log("\ntask 3");
 function categorizeCountries(array) {
